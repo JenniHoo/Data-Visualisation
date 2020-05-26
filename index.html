@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.25.3/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>5g Viima</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-text-box">
+            <h1>5G Viima &mdash; Data Visualization</h2>
+        </div>
+    </header>
+    <section class="main-info">
+        <p>
+            5G Viima visualization in charts. Pure data received from sensors shown at the end of the page, under the
+            charts. Pause buttons pauses the charts below. To continue, push the appeared play button. Notice that data
+            will keep on updating even if chart doesn't so when you unpause the chart jumps forward to recent time and
+            data.
+        </p>
+    </section>
+
+    <div class="wrapper">
+        <div class="statistics">
+            <p class="first-box">First arrived:
+                <ul>
+                    <li id="firstarrived">none</li>
+                </ul>
+            </p>
+            <p class="last-box">Last arrived:
+                <ul>
+                    <li id="lastarrived">none</li>
+                </ul>
+            </p>
+            <p class="average-box">Package/min (avg):
+                <ul>
+                    <li id="average">none</li>
+                </ul>
+            </p>
+        </div>
+
+        <section class="charts">
+            <div class="windspeed">
+                <a class="playing js--buttonws" id="wsbutton"></a>
+                <div id="chartwindspeed" class="chart"></div>
+            </div>
+            <div class="separation">&nbsp;</div>
+            <div class="winddirection">
+                <a class="playing js--buttonwd"></a>
+                <div id="chartwinddirection" class="chart"></div>
+            </div>
+            <div class="separation">&nbsp;</div>
+            <div class="temperature">
+                <a class="playing js--buttontemp"></a>
+                <div id="charttemperature" class="chart"></div>
+            </div>
+
+            <div class="dataflow">
+                <h2>Data received</h2>
+                <div class="dataflow-box" id="databox">
+                    <p>Start</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <img class="logo" src="TURKU_AMK_ENG_nega.png" alt="University logo">
+        <p>
+            Copyright &copy; 2020 by Turku University of Applied Sciences.<br>
+            All rights reserved.
+        </p>
+        <p class="made-by">&copy; Jenni Heikkilä</p>
+    </footer>
+
+    <script src="apexcharts.js"></script>
+    <script src="client.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
